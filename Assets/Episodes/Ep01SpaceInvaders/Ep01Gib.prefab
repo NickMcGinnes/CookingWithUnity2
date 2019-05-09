@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2886724559551765823}
   - component: {fileID: 8371861334804786348}
   - component: {fileID: 536992253250265961}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Ep01Gib
   m_TagString: Untagged
   m_Icon: {fileID: 0}

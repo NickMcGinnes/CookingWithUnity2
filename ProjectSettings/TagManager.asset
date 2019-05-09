@@ -4,7 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Cube
+  - Enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -14,10 +15,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - PlayerLayer
+  - EnemyLayer
+  - BulletLayer
+  - GibLayer
   - 
   - 
   - 
