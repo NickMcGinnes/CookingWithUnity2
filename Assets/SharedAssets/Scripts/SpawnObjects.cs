@@ -23,10 +23,16 @@ public class SpawnObjects : MonoBehaviour
 				Vector3 spawnPosition = transform.position;
 				spawnPosition.x += i * (SpawnAreaWidth / NoOfEnemiesX);
 				spawnPosition.y += j * (SpawnAreaHeight / NoOfEnemiesY);
-				Instantiate(SpawnObject, spawnPosition, SpawnObject.transform.rotation);
+				Instantiate(SpawnObject, spawnPosition, SpawnObject.transform.rotation,transform);
 			}
 		}
     }
+
+	private void Update()
+	{
+		if (transform.childCount == 0)
+			Start();
+	}
 
 	private void OnDrawGizmos()
 	{

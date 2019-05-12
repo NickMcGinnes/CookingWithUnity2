@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 714901243750946762}
   - component: {fileID: 714901243750946765}
   - component: {fileID: 714901243750946759}
-  - component: {fileID: 714901243750946761}
   - component: {fileID: 714901243750946758}
+  - component: {fileID: 1875802278879001650}
+  - component: {fileID: 3383351779666532989}
   m_Layer: 9
   m_Name: Ep01Enemy
   m_TagString: Enemy
@@ -111,29 +112,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &714901243750946761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 714901243750946764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfa422ba5b458a4418ef1dce1c8af848, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Gib: 1
-  Gibs:
-  - {fileID: 464786357913765702, guid: f30f0768bd1800e44aa80fcc34444d10, type: 3}
-  - {fileID: 464786357913765702, guid: f30f0768bd1800e44aa80fcc34444d10, type: 3}
-  - {fileID: 464786357913765702, guid: f30f0768bd1800e44aa80fcc34444d10, type: 3}
-  - {fileID: 464786357913765702, guid: f30f0768bd1800e44aa80fcc34444d10, type: 3}
-  - {fileID: 464786357913765702, guid: f30f0768bd1800e44aa80fcc34444d10, type: 3}
-  - {fileID: 464786357913765702, guid: f30f0768bd1800e44aa80fcc34444d10, type: 3}
-  - {fileID: 464786357913765702, guid: f30f0768bd1800e44aa80fcc34444d10, type: 3}
-  ExplosionForce: 1000
-  SpawnRadius: 1
 --- !u!114 &714901243750946758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,3 +129,40 @@ MonoBehaviour:
   LeftEdgePadding: 1
   DropDistance: 1
   direction: 1
+--- !u!114 &1875802278879001650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714901243750946764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2b9d5665602cd740ba01a5a02254ffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointValue: 100
+--- !u!114 &3383351779666532989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714901243750946764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 139e272aef0dec14da932e11b2df7652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Gib: 1
+  Gibs:
+  - {fileID: 464786357913765702, guid: f30f0768bd1800e44aa80fcc34444d10, type: 3}
+  - {fileID: 464786357913765702, guid: f30f0768bd1800e44aa80fcc34444d10, type: 3}
+  - {fileID: 464786357913765702, guid: f30f0768bd1800e44aa80fcc34444d10, type: 3}
+  - {fileID: 464786357913765702, guid: f30f0768bd1800e44aa80fcc34444d10, type: 3}
+  - {fileID: 464786357913765702, guid: f30f0768bd1800e44aa80fcc34444d10, type: 3}
+  - {fileID: 464786357913765702, guid: f30f0768bd1800e44aa80fcc34444d10, type: 3}
+  DeathAudioSource: {fileID: 7324213402049150499, guid: 11577ba56783d2e499f1c2195f0104be,
+    type: 3}
+  ExplosionForce: 100
+  SpawnRadius: 0.5

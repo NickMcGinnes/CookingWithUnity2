@@ -15,7 +15,7 @@ public class Ep01Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if (Input.anyKeyDown)
-		Instantiate(Bullet, transform.position, transform.rotation);
+		if (Input.GetKeyDown(KeyCode.Space))
+			Instantiate(Bullet, transform.position, transform.rotation);
     }
 }

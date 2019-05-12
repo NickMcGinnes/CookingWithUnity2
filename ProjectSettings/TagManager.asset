@@ -19,7 +19,7 @@ TagManager:
   - EnemyLayer
   - BulletLayer
   - GibLayer
-  - 
+  - EnemyBulletLayer
   - 
   - 
   - 
