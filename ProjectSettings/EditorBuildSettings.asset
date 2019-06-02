@@ -4,4 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Episodes/Ep04FPPuzzle/ep04.unity
+    guid: b86f489efc7af974b8e2ad6b81de319e
+  - enabled: 1
+    path: Assets/Episodes/Ep04FPPuzzle/ep05.unity
+    guid: ced4a9d941400d84b8fbcb9a83af0473
+  - enabled: 1
+    path: Assets/Episodes/Ep04FPPuzzle/ep07.unity
+    guid: 2f6281b0f001684459c858a99d984727
+  m_configObjects: {}
