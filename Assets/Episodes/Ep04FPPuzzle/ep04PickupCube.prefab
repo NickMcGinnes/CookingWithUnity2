@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 2760456518182936928}
   - component: {fileID: 2760456518182936959}
   - component: {fileID: 2760456518182936958}
-  m_Layer: 0
-  m_Name: PickupCube
+  m_Layer: 13
+  m_Name: ep04PickupCube
   m_TagString: Interactive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

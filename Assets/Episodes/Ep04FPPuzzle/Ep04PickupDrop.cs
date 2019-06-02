@@ -4,6 +4,7 @@ public class Ep04PickupDrop : MonoBehaviour
 {
 	public float PickupDistance = 5f;
 	public float HoldDistance = 4f;
+	public LayerMask PickupMask;
 	private bool _isHoldingSomething = false;
 	[SerializeField] private GameObject _heldObject;
 
@@ -16,23 +17,25 @@ public class Ep04PickupDrop : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		PickupCheck();
+	}
+
+	private void PickupCheck()
+	{
 		RaycastHit hitinfo;
-		
-		
+
+
 		if (!_isHoldingSomething)
 		{
 			if (Input.GetMouseButtonDown(0))
 			{ //we are not holding an object
-				if (Physics.Raycast(transform.position, transform.forward, out hitinfo, PickupDistance))
+				if (Physics.Raycast(transform.position, transform.forward, out hitinfo, PickupDistance, PickupMask))
 				{
-					if (hitinfo.collider.CompareTag("Interactive"))
-					{
-						Debug.Log("Looking at " + hitinfo.collider);
-						hitinfo.collider.transform.parent = transform.parent;
-						hitinfo.collider.GetComponent<Rigidbody>().isKinematic = true;
-						_heldObject = hitinfo.collider.gameObject;
-						_isHoldingSomething = true;
-					}
+					Debug.Log("Looking at " + hitinfo.collider);
+					hitinfo.collider.transform.parent = transform.parent;
+					hitinfo.collider.GetComponent<Rigidbody>().isKinematic = true;
+					_heldObject = hitinfo.collider.gameObject;
+					_isHoldingSomething = true;	
 				}
 			}
 		}
@@ -51,5 +54,5 @@ public class Ep04PickupDrop : MonoBehaviour
 				_isHoldingSomething = false;
 			}
 		}
-		}
 	}
+}

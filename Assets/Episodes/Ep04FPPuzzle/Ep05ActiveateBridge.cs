@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Ep05ActiveateBridge : MonoBehaviour
 {
@@ -9,29 +7,35 @@ public class Ep05ActiveateBridge : MonoBehaviour
 
 	// Start is called before the first frame update
 	void Start()
-    {
-        
-    }
+	{
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	}
+
+	// Update is called once per frame
+	void Update()
+	{
+
+	}
 
 	private void OnTriggerEnter(Collider other)
 	{
-		if (other.gameObject == Key)
+		if (other.CompareTag(gameObject.tag))
 		{
-			Bridge.SendMessage("ObjectActivate");
+			foreach (GameObject obj in GameObject.FindGameObjectsWithTag(gameObject.tag))
+			{
+				obj.SendMessage("ObjectActivate",SendMessageOptions.DontRequireReceiver);
+			}
 		}
 	}
 
 	private void OnTriggerExit(Collider other)
 	{
-		if (other.gameObject == Key)
+		if (other.CompareTag(gameObject.tag))
 		{
-			Bridge.SendMessage("ObjectDeactivate");
+			foreach (GameObject obj in GameObject.FindGameObjectsWithTag(gameObject.tag))
+			{
+				obj.SendMessage("ObjectDeactivate", SendMessageOptions.DontRequireReceiver);
+			}
 		}
 	}
 }

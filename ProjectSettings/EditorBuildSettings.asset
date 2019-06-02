@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Episodes/Ep04FPPuzzle/ep05.unity
     guid: ced4a9d941400d84b8fbcb9a83af0473
+  - enabled: 1
+    path: Assets/Episodes/Ep04FPPuzzle/ep07.unity
+    guid: 2f6281b0f001684459c858a99d984727
   m_configObjects: {}
