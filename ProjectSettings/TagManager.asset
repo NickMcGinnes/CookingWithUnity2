@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Enemy
   - Bullet
+  - Interactive
+  - Red
+  - Blue
+  - Green
   layers:
   - Default
   - TransparentFX
@@ -20,7 +24,7 @@ TagManager:
   - BulletLayer
   - GibLayer
   - EnemyBulletLayer
-  - 
+  - InteractiveLayer
   - 
   - 
   - 
